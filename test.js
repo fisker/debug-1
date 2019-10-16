@@ -7,8 +7,7 @@ async function run(mirror) {
 
   const spinner = require('ora')(mirror);
   spinner.start();
-  await allNodeVersions({mirror});
-
+  const versions = await allNodeVersions({mirror});
   spinner.stop()
 
   console.log(versions.slice(0,2))
