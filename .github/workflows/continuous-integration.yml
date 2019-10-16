@@ -18,7 +18,7 @@ jobs:
         NODE:
           - 12.x
           - 10.x
-          - 8.x
+          - '8.12.0'
         NODE_MIRROR:
           - 'https://npm.taobao.org/mirrors/node'
           - 'https://nodejs.org/dist'
