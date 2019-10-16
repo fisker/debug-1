@@ -10,5 +10,5 @@ spinner.start();
 require('all-node-versions')(options)
   .then((versions) => {
     spinner.stop()
-    console.log(JSON.stringify(versions, null, 2))
+    console.log(versions.slice(0,2))
   })

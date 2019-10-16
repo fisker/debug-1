@@ -23,7 +23,7 @@ jobs:
           - 'https://npm.taobao.org/mirrors/node'
           - 'https://nodejs.org/dist'
 
-    name: Test on node ${{ matrix.NODE }} and ${{ matrix.PLATFORM }}
+    name: ${{matrix.NODE_MIRROR}}@${{ matrix.PLATFORM }}/${{ matrix.NODE }}
 
     runs-on: ${{ matrix.PLATFORM }}
 
