@@ -2,7 +2,7 @@ const mirrors = {
   taobao: 'https://npm.taobao.org/mirrors/node',
   nodejs: 'https://nodejs.org/dist'
 }
-const mirror = [process.env.NODE_MIRROR] || mirrors.nodejs
+const mirror = mirrors[process.env.NODE_MIRROR] || mirrors.nodejs
 
 console.log('Mirror: ', mirror)
 
