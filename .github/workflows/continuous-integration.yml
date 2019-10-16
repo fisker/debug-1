@@ -10,7 +10,6 @@ jobs:
       fail-fast: false
       matrix:
         PLATFORM:
-          - windows-latest
           - macos-latest
           # - ubuntu-latest
         NODE:
