@@ -1,0 +1,10 @@
+{
+  "name": "debug-1",
+  "version": "1.0.0",
+  "main": "test.js",
+  "license": "MIT",
+  "dependencies": {
+    "all-node-versions": "4.0.0",
+    "ora": "4.0.2"
+  }
+}

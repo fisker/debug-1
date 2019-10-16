@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        PLATFORM:
+          - ubuntu-latest
+          - macos-latest
+          - windows-latest
+        NODE:
+          - 12.x
+          - 10.x
+          - 8.x
+          - 6.x
+          - 4.x
+
+    name: Test on node ${{ matrix.NODE }} and ${{ matrix.PLATFORM }}
+
+    runs-on: ${{ matrix.PLATFORM }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@master
+        with:
+          node-version: ${{ matrix.NODE }}
+
+      - name: Install Dependencies
+        run: yarn
+
+      - name: Build Package
+        run: node test.js
