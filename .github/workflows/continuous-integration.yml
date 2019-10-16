@@ -20,10 +20,10 @@ jobs:
           - 10.x
           - '8.12.0'
         NODE_MIRROR:
-          - 'https://npm.taobao.org/mirrors/node'
-          - 'https://nodejs.org/dist'
+          - 'taobao'
+          - 'nodejs'
 
-    name: ${{matrix.NODE_MIRROR}}@${{ matrix.PLATFORM }}/${{ matrix.NODE }}
+    name: ${{matrix.NODE_MIRROR}} @ ${{ matrix.PLATFORM }} / ${{ matrix.NODE }}
 
     runs-on: ${{ matrix.PLATFORM }}
 
