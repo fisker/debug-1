@@ -19,6 +19,9 @@ jobs:
           - 12.x
           - 10.x
           - 8.x
+        NODE_MIRROR:
+          - 'https://npm.taobao.org/mirrors/node'
+          - 'https://nodejs.org/dist'
 
     name: Test on node ${{ matrix.NODE }} and ${{ matrix.PLATFORM }}
 
@@ -38,5 +41,5 @@ jobs:
       - name: Install Dependencies
         run: yarn
 
-      - name: Build Package
-        run: node test.js
+      - name: Test
+        run: node test.js ${{MIRROR}}
