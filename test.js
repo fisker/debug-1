@@ -4,6 +4,6 @@ spinner.start();
 
 require('all-node-versions')({ mirror: 'https://npm.taobao.org/mirrors/node'})
   .then((versions) => {
-    x.stop()
+    spinner.stop()
     console.log(versions)
   })

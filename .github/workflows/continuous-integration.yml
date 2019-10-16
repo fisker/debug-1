@@ -19,8 +19,6 @@ jobs:
           - 12.x
           - 10.x
           - 8.x
-          - 6.x
-          - 4.x
 
     name: Test on node ${{ matrix.NODE }} and ${{ matrix.PLATFORM }}
 
