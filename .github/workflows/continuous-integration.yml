@@ -40,4 +40,4 @@ jobs:
         run: yarn
 
       - name: Test
-        run: node test.js ${{ matrix.NODE_MIRROR }}
+        run: node test.js

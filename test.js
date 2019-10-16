@@ -1,7 +1,8 @@
-const mirror = {
+const mirrors = {
   taobao: 'https://npm.taobao.org/mirrors/node',
   nodejs: 'https://nodejs.org/dist'
-}[process.argv[2]] || mirror.nodejs
+}
+const mirror = [process.env.NODE_MIRROR] || mirrors.nodejs
 
 console.log('Mirror: ', mirror)
 

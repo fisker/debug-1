@@ -10,4 +10,4 @@ env:
   - NODE_MORROR=tabao
   - NODE_MORROR=nodejs
 script:
-  - node test.js $NODE_MORROR
+  - node test.js
