@@ -1,18 +1,15 @@
-const mirrors = {
-  taobao: 'https://npm.taobao.org/mirrors/node',
-  nodejs: 'https://nodejs.org/dist'
+const allNodeVersions = require('all-node-versions')
+
+run('https://npm.taobao.org/mirrors/node').then(() => run('https://nodejs.org/dist'))
+
+async function run(mirror) {
+  console.log('Mirror: ', mirror)
+
+  const spinner = require('ora')(mirror);
+  spinner.start();
+  await allNodeVersions({mirror});
+
+  spinner.stop()
+
+  console.log(versions.slice(0,2))
 }
-const mirror = mirrors[process.env.NODE_MIRROR] || mirrors.nodejs
-
-console.log('Mirror: ', mirror)
-
-const spinner = require('ora')('test');
-
-spinner.start();
-
-
-require('all-node-versions')({mirror})
-  .then((versions) => {
-    spinner.stop()
-    console.log(versions.slice(0,2))
-  })

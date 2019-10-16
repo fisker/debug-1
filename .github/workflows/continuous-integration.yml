@@ -17,11 +17,8 @@ jobs:
           - 12.x
           - 10.x
           - '8.12.0'
-        NODE_MIRROR:
-          - 'taobao'
-          - 'nodejs'
 
-    name: ${{matrix.NODE_MIRROR}} @ ${{ matrix.PLATFORM }} / ${{ matrix.NODE }}
+    name: ${{ matrix.PLATFORM }} / ${{ matrix.NODE }}
 
     runs-on: ${{ matrix.PLATFORM }}
 

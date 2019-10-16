@@ -6,8 +6,5 @@ node_js:
 os:
   - windows
   - osx
-env: 
-  - NODE_MORROR=tabao
-  - NODE_MORROR=nodejs
 script:
   - node test.js
